@@ -1,0 +1,18 @@
+[
+    {
+        "id_hallazgo": 101,
+        "fecha_registro": "2026-10-28 00:40:07",
+        "tipo_categoria": "Permisos de Archivo",
+        "severidad": "Alta",
+        "descripcion": "El archivo /etc/shadow posee permisos inseguros (644).",
+        "recomendacion": "Restringir accesos ejecutando: sudo chmod 600 /etc/shadow"
+    },
+    {
+        "id_hallazgo": 102,
+        "fecha_registro": "2026-10-28 00:40:07",
+        "tipo_categoria": "Analisis de Log",
+        "severidad": "Critica",
+        "descripcion": "Se registraron 10 intentos fallidos de acceso SSH.",
+        "recomendacion": "Habilitar Fail2ban para bloqueo automatico de IPs y deshabilitar el acceso root directo."
+    }
+]
