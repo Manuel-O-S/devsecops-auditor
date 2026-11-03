@@ -1,7 +1,7 @@
 [
     {
         "id_hallazgo": 101,
-        "fecha_registro": "2026-10-28 00:40:07",
+        "fecha_registro": "2026-11-03 00:05:39",
         "tipo_categoria": "Permisos de Archivo",
         "severidad": "Alta",
         "descripcion": "El archivo /etc/shadow posee permisos inseguros (644).",
@@ -9,10 +9,26 @@
     },
     {
         "id_hallazgo": 102,
-        "fecha_registro": "2026-10-28 00:40:07",
+        "fecha_registro": "2026-11-03 00:05:39",
         "tipo_categoria": "Analisis de Log",
         "severidad": "Critica",
-        "descripcion": "Se registraron 10 intentos fallidos de acceso SSH.",
+        "descripcion": "Se registraron 6 intentos fallidos de acceso SSH.",
         "recomendacion": "Habilitar Fail2ban para bloqueo automatico de IPs y deshabilitar el acceso root directo."
+    },
+    {
+        "id_hallazgo": 103,
+        "fecha_registro": "2026-11-03 00:05:39",
+        "tipo_categoria": "Permisos de Archivo",
+        "severidad": "Media",
+        "descripcion": "Permisos mas abiertos de lo esperado: /etc/passwd (664, esperado 644).",
+        "recomendacion": "Corregir con: sudo chmod 644 /etc/passwd y sudo chmod 440 /etc/sudoers"
+    },
+    {
+        "id_hallazgo": 104,
+        "fecha_registro": "2026-11-03 00:05:39",
+        "tipo_categoria": "Cuentas de Usuario",
+        "severidad": "Critica",
+        "descripcion": "Usuarios distintos de root con privilegios de administrador (UID 0): prueba0.",
+        "recomendacion": "Revisar la cuenta y eliminarla o cambiar su UID, por ejemplo: sudo userdel NOMBRE"
     }
 ]
